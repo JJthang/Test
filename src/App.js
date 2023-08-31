@@ -35,7 +35,7 @@ function App() {
     }, 1500);
   }
   return (
-    <div className="w-full h-[900px] flex flex-col justify-center items-center">
+    <div className="w-full h-[963px] flex flex-col justify-center items-center">
       {getUser == null ? (
         <FormLogin setFormData={setFormData} formData={formData} />
       ) : (

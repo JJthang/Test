@@ -18,61 +18,50 @@ export const FormLogin = ({ formData, setFormData }) => {
   };
   return (
     <>
-      <form className="w-full max-w-sm" onSubmit={handSubmit}>
-        <div className="md:flex md:items-center mb-6">
-          <div className="md:w-1/3">
-            <label
-              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-              htmlFor="inline-full-name"
-            >
-              Full Name
-            </label>
+      <div className="w-full h-full flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <div className="w-[400px] h-[500px] bg-white rounded-xl ">
+          <div className="w-full h-[20%] border-b-[1px] border-gray-500 flex items-center justify-center ">
+            <h1 className="text-4xl font-medium ">Login</h1>
           </div>
-          <div className="md:w-2/3">
-            <input
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-              id="inline-full-name"
-              type="text"
-              name="username"
-              value={formData.username}
-              onChange={handleInputChange}
-              placeholder="Please enter username..."
-            />
+          <div className="w-full h-[80%]">
+            <form
+              className="w-full h-full flex items-start  justify-center"
+              onSubmit={handSubmit}
+            >
+              <div className="w-[80%] h-[80%] flex flex-col justify-evenly ">
+                <div className="w-full h-[50px]">
+                  <input
+                    className=" w-full border-b-[1px] border-gray-500  text-gray-500 focus:outline-none px-1 py-3"
+                    type="text"
+                    name="username"
+                    value={formData.username}
+                    onChange={handleInputChange}
+                    placeholder="Username"
+                  />
+                </div>
+                <div className="w-full h-[50px]">
+                  <input
+                    className=" w-full border-b-[1px] border-gray-500  text-gray-500 focus:outline-none px-1 py-3"
+                    type="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleInputChange}
+                    placeholder="Password"
+                  />
+                </div>
+                <div className="w-full h-[50px] flex items-center justify-center">
+                  <button
+                    className="w-[350px] h-[45px] bg-red-500 rounded-3xl text-white font-medium bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 "
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-        <div className="md:flex md:items-center mb-6">
-          <div className="md:w-1/3">
-            <label
-              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-              htmlFor="inline-password"
-            >
-              Password
-            </label>
-          </div>
-          <div className="md:w-2/3">
-            <input
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-              id="inline-password"
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleInputChange}
-              placeholder="******************"
-            />
-          </div>
-        </div>
-        <div className="md:flex md:items-center">
-          <div className="md:w-1/3" />
-          <div className="md:w-2/3">
-            <button
-              className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-              type="submit"
-            >
-              Login Up
-            </button>
-          </div>
-        </div>
-      </form>
+      </div>
     </>
   );
 };
